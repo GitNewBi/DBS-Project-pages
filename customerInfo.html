@@ -1,0 +1,150 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Customer Information</title>
+    
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="index.html">Vincent Music Store</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample03">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  href="https://example.com" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Music Applications</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown03">
+              <a class="dropdown-item" href="addMusicTitle.html">Add A Music Title</a>
+              <a class="dropdown-item" href="changeMusicInfo.html">Change Music Information</a>
+              <a class="dropdown-item" href="queryMusicInfo.html">Query Music Information</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ordering Applications</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown03">
+              <a class="dropdown-item" href="queryOrderInfo.html">Query Order Information</a>
+              <a class="dropdown-item" href="placeNewOrder.html">Place New Order</a>
+              <a class="dropdown-item" href="changeExistingCustomerOrder.html">Change Existing Customer Order</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sales Applications</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown03">
+              <a class="dropdown-item" href="sellMusicTitle.html">Sell A Title(s)</a>
+              <a class="dropdown-item" href="logInSalesReport.html">Sales Report</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrative Applications</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown03">
+             <a class="dropdown-item" href="customerInfo.html">Customer Information</a>
+              <a class="dropdown-item" href="logInEmployeeInfo.html">Employee Information</a>
+            </div>
+          </li>
+        </ul>
+       </div>
+       </nav>
+    </nav>
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h2>Customer Information</h2>
+      </div>
+
+        <div class="col-md-8 order-md-1">
+          <hr>
+          <form class="needs-validation" novalidate method="POST" action="../Add_Music_In_Store.php">
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label for="ID">Customer ID</label>
+                <select class="custom-select d-block w-100" name="ID" id="ID" required>
+                  <option value="">-Select ID-</option>
+                </select>
+              </div>
+              <div class="row">
+              <div class="col-md-6 mb-3">
+                &nbsp&nbsp&nbsp&nbsp<label for="firstName">Customer First Name</label>
+                <input type="text" class="form-control" name="customerFirstName" id="customerFirstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Customer first name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Customer Last Name</label>
+                <input type="text" class="form-control" name="customerLasttName" id="customerLastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Customer last name is required.
+                </div>
+              </div>
+              </div>
+            </div>
+
+            <hr class="mb-4">
+              <table>
+                <tr>
+                  <td><button class="btn btn-primary btn-lg btn-block" type="submit" style="width: 300px; height: 50px;" id="displayCustCurrentInfor">Display Current Information</button></td>
+                
+                <td><button class="btn btn-primary btn-lg btn-block" type="submit" style="width: 300px; height: 50px;" id="updateCustNewInfor">Update New Information</button></td>
+                </tr>
+              </table>  
+          </form>
+          <hr>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container" align="center">
+        <span class="text-muted">Vincent Music Store Ltd.
+              &copy 2018</span>
+      </div>
+    </footer>
+    <!-- JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  </body>
+</html>
